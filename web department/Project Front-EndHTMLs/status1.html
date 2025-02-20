@@ -1,0 +1,189 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Attendance System Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <div class="flex h-screen">
+   <!-- Sidebar -->
+   <div class="bg-teal-700 text-white w-64 p-4">
+    <div class="flex items-center mb-8">
+     <img alt="Logo" class="w-10 h-10 mr-2" height="40" src="https://storage.googleapis.com/a1aa/image/WwuHfPNnxreuXuc48frC4to0EKaJNron-9WfzwJ7Mw4.jpg" width="40"/>
+     <span class="text-2xl font-bold">
+      Attendance System
+     </span>
+    </div>
+    <nav>
+     <ul>
+      <li class="mb-4">
+       <a class="flex items-center" href="#">
+        <i class="fas fa-book mr-2">
+        </i>
+        Subjects
+       </a>
+      </li>
+      <li class="mb-4">
+       <a class="flex items-center" href="#">
+        <i class="fas fa-tachometer-alt mr-2">
+        </i>
+        Dashboard
+       </a>
+      </li>
+      <li class="mb-4">
+       <a class="flex items-center" href="#">
+        <i class="fas fa-user mr-2">
+        </i>
+        Profiles
+       </a>
+      </li>
+      <li class="mb-4">
+       <a class="flex items-center" href="#">
+        <i class="fas fa-envelope mr-2">
+        </i>
+        Messages
+       </a>
+      </li>
+      <li class="mb-4">
+       <a class="flex items-center" href="#">
+        <i class="fas fa-chart-line mr-2">
+        </i>
+        Reports
+       </a>
+      </li>
+      <li class="mb-4">
+       <a class="flex items-center" href="#">
+        <i class="fas fa-file-alt mr-2">
+        </i>
+        Leave Applications
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <!-- Main Content -->
+   <div class="flex-1 p-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-6">
+     <div>
+      <h1 class="text-2xl font-bold">
+       DASHBOARD
+      </h1>
+      <p class="text-gray-600">
+       Home / Dashboard
+      </p>
+     </div>
+     <div class="flex items-center">
+      <i class="fas fa-bell text-gray-600 mr-6">
+      </i>
+      <div class="flex items-center">
+       <span class="mr-2">
+        ADMIN
+       </span>
+       <img alt="Admin Avatar" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/t7aUg04hiY7q2zBEf8NAbYlJlIZzAWSykrk6QlhYGUI.jpg" width="40"/>
+      </div>
+      <button class="ml-6 bg-red-500 text-white px-4 py-2 rounded">
+       LOG OUT
+      </button>
+     </div>
+    </div>
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-3 gap-4 mb-6">
+     <div class="bg-yellow-100 p-4 rounded shadow">
+      <div class="flex items-center justify-between">
+       <div>
+        <h2 class="text-xl font-bold">
+         Present
+        </h2>
+        <p class="text-2xl font-bold">
+         145
+        </p>
+        <p class="text-green-500">
+         12% increase
+        </p>
+       </div>
+       <img alt="Present Icon" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/iVAaC78R0t2lkCtpnbHG_6kEjAahDjvqACHgHKEt54k.jpg" width="50"/>
+      </div>
+     </div>
+     <div class="bg-yellow-100 p-4 rounded shadow">
+      <div class="flex items-center justify-between">
+       <div>
+        <h2 class="text-xl font-bold">
+         Absent
+        </h2>
+        <p class="text-2xl font-bold">
+         5
+        </p>
+        <p class="text-green-500">
+         10% increase
+        </p>
+       </div>
+       <img alt="Absent Icon" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/GBWreNks-Cwn-4iBlgXGarNh1X1fU-gGWyTb-pxWp7A.jpg" width="50"/>
+      </div>
+     </div>
+     <div class="bg-yellow-100 p-4 rounded shadow">
+      <div class="flex items-center justify-between">
+       <div>
+        <h2 class="text-xl font-bold">
+         Attendance
+        </h2>
+        <p class="text-2xl font-bold">
+         148
+        </p>
+        <p class="text-green-500">
+         12% increase
+        </p>
+       </div>
+       <img alt="Attendance Icon" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/WGchd3LhK-Y6P5gQLscEyRBStLD6tZf0Ap4BvV_mh_0.jpg" width="50"/>
+      </div>
+     </div>
+    </div>
+    <!-- Reports and Calendar -->
+    <div class="grid grid-cols-3 gap-4">
+     <div class="col-span-2 bg-white p-4 rounded shadow">
+      <h2 class="text-xl font-bold mb-4">
+       Reports | Today
+      </h2>
+      <img alt="Graph showing attendance reports" class="w-full h-64" height="300" src="https://storage.googleapis.com/a1aa/image/PyUWEZ1nouAZzdGNPfqOPBJnFAr777X8VUnkXh9uP1M.jpg" width="600"/>
+     </div>
+     <div>
+      <div class="bg-white p-4 rounded shadow mb-4">
+       <h2 class="text-xl font-bold mb-4">
+        Leave Applications Pending
+       </h2>
+       <p class="text-green-500">
+        View more
+       </p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+       <h2 class="text-xl font-bold mb-4">
+        Calendar
+       </h2>
+       <img alt="Calendar" class="w-full" height="200" src="https://storage.googleapis.com/a1aa/image/XNAEjbejSZncd4a_vXe8JoHoJtOjISXZ_suHY05iWBk.jpg" width="200"/>
+      </div>
+     </div>
+    </div>
+    <!-- Footer -->
+    <div class="mt-6 bg-teal-100 p-4 rounded shadow flex items-center justify-between">
+     <p class="text-xl font-bold">
+      182 student
+     </p>
+     <p class="text-green-500">
+      View more
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
