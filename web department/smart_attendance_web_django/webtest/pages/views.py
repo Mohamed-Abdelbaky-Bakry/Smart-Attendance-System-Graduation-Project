@@ -21,8 +21,32 @@ def Dashboard(request):
 def Search(request):
     return render(request, 'pages/Search.html')
 
+from django.shortcuts import render
+
+from django.shortcuts import render
+
 def Profile(request):
-    return render(request, 'pages/Profile.html')
+    student = {
+        "id": 123456780,
+        "name": "Ali Khattab",
+        "department": "Civil Department",
+        "year": "Fourth Year",
+        "photo_url": "https://storage.googleapis.com/a1aa/image/gC4fdRVK-PE_HJVJYbDJdpf3gqoV8wdwb1dBryXUgck.jpg",
+        "attendance": 19,
+        "total_classes": 20,
+        "leaves": 1,
+        "performance": 95,  # Performance percentage
+        "subject": "Database",
+        "email": "123456780@shosa.edu.eg",
+        "phone": "+20 123456789",
+    }
+
+    # Fix: Compute stroke-dashoffset in Python
+    student["performance_offset"] = 282.6 * (1 - student["performance"] / 100)
+
+    return render(request, "pages/Profile.html", {"student": student})
+
+
 
 def message(request):
     return render(request, 'pages/message.html')

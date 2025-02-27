@@ -1,216 +1,61 @@
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Attendance System - Student Details
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
-            font-family: 'Roboto', sans-serif;
-        }
-  </style>
- </head>
- <body class="bg-gray-100">
-  <div class="flex">
-   <!-- Sidebar -->
-   <div class="bg-teal-700 text-white w-64 p-4 flex flex-col min-h-screen sticky top-0">
-    <div class="flex items-center mb-8">
-     <span class="text-2xl font-bold">
-      Attendance System
-     </span>
+{% extends "base.html" %}
+
+{% block title %}Student Details - Attendance System{% endblock %}
+
+{% block breadcrumb %}Home / Students / {{ student.name }}{% endblock %}
+
+{% block content %}
+<div class="p-6">
+    <div class="text-2xl font-semibold text-teal-700 mb-4">
+        STUDENT DETAILS
     </div>
-    <nav class="flex-1">
-     <ul>
-      <li class="mb-4">
-       <a class="flex items-center" href="#">
-        <i class="fas fa-book mr-2">
-        </i>
-        Subjects
-       </a>
-      </li>
-      <li class="mb-4">
-       <a class="flex items-center" href="#">
-        <i class="fas fa-tachometer-alt mr-2">
-        </i>
-        Dashboard
-       </a>
-      </li>
-      <li class="mb-4">
-       <a class="flex items-center" href="#">
-        <i class="fas fa-user mr-2">
-        </i>
-        Students
-       </a>
-      </li>
-      <li class="mb-4">
-       <a class="flex items-center" href="#">
-        <i class="fas fa-envelope mr-2">
-        </i>
-        Messages
-       </a>
-      </li>
-      <li class="mb-4">
-       <a class="flex items-center" href="#">
-        <i class="fas fa-chart-line mr-2">
-        </i>
-        Reports
-       </a>
-      </li>
-      <li class="mb-4">
-       <a class="flex items-center" href="#">
-        <i class="fas fa-file-alt mr-2">
-        </i>
-        Leave Applications
-       </a>
-      </li>
-     </ul>
-    </nav>
-   </div>
-   <!-- Main Content -->
-   <div class="flex-1 flex flex-col">
-    <!-- Header -->
-    <header class="bg-[#17272F] text-white p-4 flex justify-between items-center">
-     <div class="text-gray-300">
-      Home / Students / Ali khattab
-     </div>
-     <div class="flex items-center">
-      <a class="mr-4" href="#">
-       <i class="fas fa-envelope">
-       </i>
-      </a>
-      <a class="mr-4" href="#">
-       <i class="fas fa-bell">
-       </i>
-      </a>
-      <div class="flex items-center">
-       <img alt="Admin avatar with a professional look" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/OgDvbgmlrNHJC4zYLvgZD0dpNAFH_2CdBCwfvGzUBgo.jpg" width="40"/>
-       <span class="ml-2">
-        ADMIN
-       </span>
-      </div>
-     </div>
-    </header>
-    <!-- Content -->
-    <div class="p-6">
-     <div class="text-2xl font-semibold text-teal-700 mb-4">
-      STUDENTS DETAILS
-     </div>
-     <div class="text-gray-600 mb-4">
-      Home / Students / Ali khattab
-     </div>
-     <div class="bg-white p-8 rounded-lg shadow-lg">
-      <div class="flex items-center mb-8">
-       <img alt="Student Avatar" class="w-20 h-20 rounded-full mr-4" height="80" src="https://storage.googleapis.com/a1aa/image/gC4fdRVK-PE_HJVJYbDJdpf3gqoV8wdwb1dBryXUgck.jpg" width="80"/>
-       <div>
-        <h3 class="text-2xl font-bold text-gray-700">
-         Ali khattab
-        </h3>
-        <p class="text-gray-500">
-         Civil Department
-        </p>
-        <p class="text-gray-500">
-         Fourth year
-        </p>
-       </div>
-       <i class="fas fa-edit text-yellow-500 ml-auto">
-       </i>
-      </div>
-      <div class="grid grid-cols-3 gap-8">
-       <div class="bg-teal-700 text-white p-4 rounded-lg text-center">
-        <i class="fas fa-calendar-alt text-2xl mb-2">
-        </i>
-        <p class="text-lg font-bold">
-         THIS MONTH
-        </p>
-        <p class="text-2xl">
-         Present 19/20
-        </p>
-       </div>
-       <div class="bg-gray-800 text-white p-4 rounded-lg text-center">
-        <i class="fas fa-paper-plane text-2xl mb-2">
-        </i>
-        <p class="text-lg font-bold">
-         LEAVES APPLIED FOR
-        </p>
-        <p class="text-2xl">
-         1
-        </p>
-       </div>
-       <div class="bg-white p-4 rounded-lg shadow-lg">
-        <h4 class="text-lg font-bold text-gray-700 mb-4">
-         Performance
-        </h4>
-        <div class="flex justify-center items-center">
-         <div class="relative">
-          <svg class="w-32 h-32">
-           <circle cx="50%" cy="50%" fill="none" r="45%" stroke="gray" stroke-width="10">
-           </circle>
-           <circle cx="50%" cy="50%" fill="none" r="45%" stroke="green" stroke-dasharray="282.6" stroke-dashoffset="14.13" stroke-width="10">
-           </circle>
-          </svg>
-          <div class="absolute inset-0 flex justify-center items-center">
-           <span class="text-2xl font-bold text-green-500">
-            95%
-           </span>
-          </div>
-         </div>
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="flex items-center mb-8">
+            <img alt="Student Avatar" class="w-20 h-20 rounded-full mr-4" 
+                 src="{{ student.photo_url }}"/>
+            <div>
+                <h3 class="text-2xl font-bold text-gray-700">{{ student.name }}</h3>
+                <p class="text-gray-500">{{ student.department }}</p>
+                <p class="text-gray-500">{{ student.year }}</p>
+            </div>
+            <i class="fas fa-edit text-yellow-500 ml-auto"></i>
         </div>
-        <div class="mt-4 text-sm text-gray-500">
-         <p>
-          <span class="text-green-500">
-           ●
-          </span>
-          Completed tasks
-         </p>
-         <p>
-          <span class="text-red-500">
-           ●
-          </span>
-          Ongoing tasks
-         </p>
-         <p>
-          <span class="text-yellow-500">
-           ●
-          </span>
-          Incomplete tasks
-         </p>
+        <div class="grid grid-cols-3 gap-8">
+            <div class="bg-teal-700 text-white p-4 rounded-lg text-center">
+                <i class="fas fa-calendar-alt text-2xl mb-2"></i>
+                <p class="text-lg font-bold">THIS MONTH</p>
+                <p class="text-2xl">Present {{ student.attendance }}/{{ student.total_classes }}</p>
+            </div>
+            <div class="bg-gray-800 text-white p-4 rounded-lg text-center">
+                <i class="fas fa-paper-plane text-2xl mb-2"></i>
+                <p class="text-lg font-bold">LEAVES APPLIED</p>
+                <p class="text-2xl">{{ student.leaves }}</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h4 class="text-lg font-bold text-gray-700 mb-4">Performance</h4>
+                <div class="flex justify-center items-center">
+                    <div class="relative">
+                        <svg class="w-32 h-32">
+                            <circle cx="50%" cy="50%" fill="none" r="45%" stroke="gray" stroke-width="10"></circle>
+                            <circle cx="50%" cy="50%" fill="none" r="45%" stroke="green" 
+                                    stroke-dasharray="282.6" 
+                                    stroke-dashoffset="{{ student.performance_offset }}" 
+                                    stroke-width="10">
+                            </circle>
+                        </svg>
+                        <div class="absolute inset-0 flex justify-center items-center">
+                            <span class="text-2xl font-bold text-green-500">{{ student.performance }}%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-       </div>
-      </div>
-      <div class="mt-8 bg-yellow-100 p-4 rounded-lg">
-       <p>
-        <strong>
-         Student ID:
-        </strong>
-        123456780
-       </p>
-       <p>
-        <strong>
-         Subject:
-        </strong>
-        Data Base
-       </p>
-       <p>
-        <strong>
-         E_mail:
-        </strong>
-        123456780@shosa.edu.eg
-       </p>
-       <p>
-        <strong>
-         Mobile Number:
-        </strong>
-        +20 123456789
-       </p>
-      </div>
-     </div>
+        <div class="mt-8 bg-yellow-100 p-4 rounded-lg">
+            <p><strong>Student ID:</strong> {{ student.id }}</p>
+            <p><strong>Subject:</strong> {{ student.subject }}</p>
+            <p><strong>Email:</strong> {{ student.email }}</p>
+            <p><strong>Mobile Number:</strong> {{ student.phone }}</p>
+        </div>
     </div>
-   </div>
-  </div>
- </body>
-</html>
+</div>
+{% endblock %}

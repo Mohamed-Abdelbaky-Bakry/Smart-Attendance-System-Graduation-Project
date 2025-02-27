@@ -1,51 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance System</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #1f2937;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .sidebar .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar nav ul li a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar nav ul li a:hover {
+            background-color: #374151;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header .breadcrumb {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .header .admin-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .admin-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .content .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .content .subject-card {
+            background-color: #f9fafb;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logout-btn {
+            background-color: #ef4444;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #dc2626;
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <div class="flex">
         <!-- Sidebar -->
-        <div>
-            <div>
-                <img src="https://storage.googleapis.com/a1aa/image/kEMxrvsn9Y-RRiRnIA5kfzPLqFqLeir7u6GLUIMVesc.jpg" alt="Logo" width="40" height="40">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="https://storage.googleapis.com/a1aa/image/kEMxrvsn9Y-RRiRnIA5kfzPLqFqLeir7u6GLUIMVesc.jpg" alt="Logo">
                 <span>Attendance System</span>
             </div>
             <nav>
                 <ul>
-                    <li>
-                        <a href="#">Subjects</a>
-                    </li>
+                    <li><a href="#">Subjects</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Profiles</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Leave Applications</a></li>
                 </ul>
             </nav>
         </div>
 
-        <!-- Main content -->
-        <div>
+        <!-- Main Content -->
+        <div class="main-content">
             <!-- Header -->
-            <header>
-                <div>
-                    <span>Home / Subjects</span>
-                </div>
-                <div>
+            <header class="header">
+                <div class="breadcrumb">Home / Subjects</div>
+                <div class="admin-info">
                     <span>ADMIN</span>
-                    <img src="https://storage.googleapis.com/a1aa/image/ayGhI3bpgc14o8bGyxs5RdecDLJbWozSrryoTm0q9Qw.jpg" alt="Admin Avatar" width="40" height="40">
+                    <img src="https://storage.googleapis.com/a1aa/image/ayGhI3bpgc14o8bGyxs5RdecDLJbWozSrryoTm0q9Qw.jpg" alt="Admin Avatar">
                 </div>
             </header>
 
             <!-- Content -->
-            <div>
-                <div>
-                    <h1>Subjects</h1>
-                    <button>LOG OUT</button>
-                </div>
-                <div>
-                    <div>Subject 1</div>
-                    <div>Subject 2</div>
-                    <div>Subject 3</div>
-                    <div>Subject 4</div>
-                    <div>Subject 5</div>
-                    <div>Subject 6</div>
+            <div class="content">
+                <h1>Subjects</h1>
+                <button class="logout-btn">LOG OUT</button>
+                <div class="subjects-grid">
+                    <div class="subject-card">Subject 1</div>
+                    <div class="subject-card">Subject 2</div>
+                    <div class="subject-card">Subject 3</div>
+                    <div class="subject-card">Subject 4</div>
+                    <div class="subject-card">Subject 5</div>
+                    <div class="subject-card">Subject 6</div>
                 </div>
             </div>
         </div>
